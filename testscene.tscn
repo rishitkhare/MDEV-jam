@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://djxbl6wklvoum"]
+
+[ext_resource type="Script" uid="uid://b30whbrbyybu2" path="res://DialogueSystem/dialogue_system.gd" id="1_jotil"]
+
+[sub_resource type="Animation" id="Animation_44gc5"]
+resource_name = "DialogueAnimation"
+
+[sub_resource type="Animation" id="Animation_612pj"]
+resource_name = "DialogueAnimationClose"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_asog6"]
+_data = {
+&"DialogueAnimation": SubResource("Animation_44gc5"),
+&"DialogueAnimationClose": SubResource("Animation_612pj")
+}
+
+[node name="DialogueGUILayer" type="CanvasLayer" unique_id=1951739559]
+
+[node name="DialogueSystem" type="Control" parent="." unique_id=982940736]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_jotil")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogueSystem" unique_id=109667639]
+libraries/ = SubResource("AnimationLibrary_asog6")
+
+[connection signal="animation_finished" from="DialogueSystem/AnimationPlayer" to="DialogueSystem" method="_on_animation_player_animation_finished"]
