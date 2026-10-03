@@ -21,7 +21,8 @@ const samplePortrait2 = "res://sprites/portraits/Sample Portrait2.png"
 
 # associates name from dialogue file to texture resource
 const nameToTexture = {
-	
+	"player1" : samplePortrait1,
+	"player2" : samplePortrait2
 }
 
 # constructor parses a single line from the dialogue resource file

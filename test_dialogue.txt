@@ -1,0 +1,7 @@
+<player1>     this is a piece of dialogue. We are testing to make sure it works...
+
+<player2>     alternate portrait is featured here. line 2!
+			  This is a second line of dialogue, without re-specifying the portrait
+
+
+<player1>     Again we are back to the first portrait.
